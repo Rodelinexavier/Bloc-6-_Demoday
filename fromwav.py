@@ -2,7 +2,9 @@ import streamlit as st
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import regex as re
-import en_core_web_md
+import spacy
+
+nlp = spacy.load("en_core_web_md")
 
 import speech_recognition as sr
 r = sr.Recognizer()
@@ -28,7 +30,7 @@ try:
       text = re.sub(r's[*]+','suck',text)      
       sentences.append(text)
      except Exception as e:
-      st.write("Exception: "+str(e))
+      st.write("Exception: en_core_web_md"+str(e))
     import pandas as pd            
     df = pd.DataFrame(columns=['Sentences'])
     df['Sentences'] = sentences
