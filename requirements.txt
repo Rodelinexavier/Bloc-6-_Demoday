@@ -7,4 +7,4 @@ keras
 tensorflow
 sklearn
 scikit-learn
-xgboost<1.5.0
+xgboost==1.4.2
