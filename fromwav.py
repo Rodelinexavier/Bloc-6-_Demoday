@@ -4,7 +4,7 @@ from pydub.silence import split_on_silence
 import regex as re
 import spacy
 
-nlp = spacy.load("en_core_web_md")
+nlp = spacy.load("en_core_web_sm")
 
 import speech_recognition as sr
 r = sr.Recognizer()
