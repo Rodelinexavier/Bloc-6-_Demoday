@@ -36,8 +36,8 @@ try:
     df['Sentences'] = sentences
     import pickle
     import numpy as np
-    import en_core_web_md
-    nlp = en_core_web_md.load()
+#    import en_core_web_md
+#    nlp = en_core_web_md.load()
     from keras.models import load_model
     with open('TFIDF.pkl','rb') as TFIDF:
         tfidf = pickle.load(TFIDF)
