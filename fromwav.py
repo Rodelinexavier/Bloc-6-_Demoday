@@ -3,6 +3,7 @@ from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import regex as re
 import spacy
+from keras.models import load_model
 
 nlp = spacy.load("en_core_web_sm")
 
