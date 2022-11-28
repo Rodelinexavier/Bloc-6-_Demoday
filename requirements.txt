@@ -2,3 +2,4 @@ pyaudio
 SpeechRecognition>=3.8.1
 pydub
 regex
+en_core_web_md

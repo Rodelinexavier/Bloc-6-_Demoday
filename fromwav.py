@@ -2,6 +2,7 @@ import streamlit as st
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import regex as re
+import en_core_web_md
 
 import speech_recognition as sr
 r = sr.Recognizer()
