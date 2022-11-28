@@ -54,17 +54,17 @@ try:
      probs = lr.predict_proba(text_tfidf)
      return probs[0][1]
 
-    with open('xgboost.pkl','rb') as XGBOOST:
-     xgboost = pickle.load(XGBOOST) 
+#    with open('xgboost.pkl','rb') as XGBOOST:
+#     xgboost = pickle.load(XGBOOST) 
 
-    def pred_prob_XGBOOST(text):
+#    def pred_prob_XGBOOST(text):
     
-     token_text = nlp(text)
-     text = [element.lemma_.lower() for element in token_text]
-     text = " ".join(text)
-     text_tfidf = tfidf.transform([text])
-     probs = xgboost.predict_proba(text_tfidf)
-     return probs[0][1]
+#     token_text = nlp(text)
+#     text = [element.lemma_.lower() for element in token_text]
+#     text = " ".join(text)
+#     text_tfidf = tfidf.transform([text])
+#     probs = xgboost.predict_proba(text_tfidf)
+#     return probs[0][1]
 
     with open('tokenizer.pkl','rb') as TOKEN:
      tokenizer = pickle.load(TOKEN)
@@ -85,8 +85,8 @@ try:
 
     df['Hate score by LR'] = df['Sentences'].apply(pred_prob_LR)
     df['Hate score by LR'] = df['Hate score by LR'].apply(lambda x : round(x,2))
-    df['Hate score by XGBOOST'] = df['Sentences'].apply(pred_prob_XGBOOST)
-    df['Hate score by XGBOOST'] = df['Hate score by XGBOOST'].apply(lambda x : round(x,2))
+#    df['Hate score by XGBOOST'] = df['Sentences'].apply(pred_prob_XGBOOST)
+#    df['Hate score by XGBOOST'] = df['Hate score by XGBOOST'].apply(lambda x : round(x,2))
     df['Hate score by Network Neural'] = df['Sentences'].apply(pred_prob_NN)
     df['Hate score by Network Neural'] = df['Hate score by Network Neural'].apply(lambda x : round(x,2))
     try:
