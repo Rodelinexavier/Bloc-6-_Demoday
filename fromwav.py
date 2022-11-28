@@ -90,14 +90,14 @@ try:
     df['Hate score by Network Neural'] = df['Sentences'].apply(pred_prob_NN)
     df['Hate score by Network Neural'] = df['Hate score by Network Neural'].apply(lambda x : round(x,2))
     try:
-     dict_means = {col:int(100*df[col].mean()+0.5)/100 for col in df.columns.tolist()[-3:]}
+     dict_means = {col:int(100*df[col].mean()+0.5)/100 for col in df.columns.tolist()[-2:]}
     except ValueError:
-     dict_means = {col:np.nan for col in df.columns.tolist()[-3:]}    
+     dict_means = {col:np.nan for col in df.columns.tolist()[-2:]}    
     dict_means['Sentences'] = "Average value"
     dict_means = [dict_means]
     df = pd.concat([df,pd.DataFrame(dict_means)],axis = 0)
     try:
-     score_hate_mean = int(100*df.iloc[-1,-3:].mean()+0.5)/100
+     score_hate_mean = int(100*df.iloc[-1,-2:].mean()+0.5)/100
     except:
      score_hate_mean = np.nan    
     st.write(f'The hate score during this time is {score_hate_mean}')
