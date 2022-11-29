@@ -4,6 +4,7 @@ from pydub.silence import split_on_silence
 import regex as re
 import spacy
 from keras.models import load_model
+import xgboost
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -54,17 +55,17 @@ try:
      probs = lr.predict_proba(text_tfidf)
      return probs[0][1]
 
-#    with open('xgboost.pkl','rb') as XGBOOST:
-#     xgboost = pickle.load(XGBOOST) 
+    with open('xgboost.pkl','rb') as XGBOOST:
+     xgboost = pickle.load(XGBOOST) 
 
-#    def pred_prob_XGBOOST(text):
+    def pred_prob_XGBOOST(text):
     
-#     token_text = nlp(text)
-#     text = [element.lemma_.lower() for element in token_text]
-#     text = " ".join(text)
-#     text_tfidf = tfidf.transform([text])
-#     probs = xgboost.predict_proba(text_tfidf)
-#     return probs[0][1]
+     token_text = nlp(text)
+     text = [element.lemma_.lower() for element in token_text]
+     text = " ".join(text)
+     text_tfidf = tfidf.transform([text])
+     probs = xgboost.predict_proba(text_tfidf)
+     return probs[0][1]
 
     with open('tokenizer.pkl','rb') as TOKEN:
      tokenizer = pickle.load(TOKEN)
@@ -85,19 +86,19 @@ try:
 
     df['Hate score by LR'] = df['Sentences'].apply(pred_prob_LR)
     df['Hate score by LR'] = df['Hate score by LR'].apply(lambda x : round(x,2))
-#    df['Hate score by XGBOOST'] = df['Sentences'].apply(pred_prob_XGBOOST)
-#    df['Hate score by XGBOOST'] = df['Hate score by XGBOOST'].apply(lambda x : round(x,2))
+    df['Hate score by XGBOOST'] = df['Sentences'].apply(pred_prob_XGBOOST)
+    df['Hate score by XGBOOST'] = df['Hate score by XGBOOST'].apply(lambda x : round(x,2))
     df['Hate score by Network Neural'] = df['Sentences'].apply(pred_prob_NN)
     df['Hate score by Network Neural'] = df['Hate score by Network Neural'].apply(lambda x : round(x,2))
     try:
-     dict_means = {col:int(100*df[col].mean()+0.5)/100 for col in df.columns.tolist()[-2:]}
+     dict_means = {col:int(100*df[col].mean()+0.5)/100 for col in df.columns.tolist()[-3:]}
     except ValueError:
-     dict_means = {col:np.nan for col in df.columns.tolist()[-2:]}    
+     dict_means = {col:np.nan for col in df.columns.tolist()[-3:]}    
     dict_means['Sentences'] = "Average value"
     dict_means = [dict_means]
     df = pd.concat([df,pd.DataFrame(dict_means)],axis = 0)
     try:
-     score_hate_mean = int(100*df.iloc[-1,-2:].mean()+0.5)/100
+     score_hate_mean = int(100*df.iloc[-1,-3:].mean()+0.5)/100
     except:
      score_hate_mean = np.nan    
     st.write(f'The hate score during this time is {score_hate_mean}')
@@ -126,5 +127,5 @@ try:
 
 
 except Exception as e:
-    st.write("Please upload wav file") 
+    st.write(e) 
 
