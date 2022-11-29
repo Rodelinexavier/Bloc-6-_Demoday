@@ -6,6 +6,8 @@ import spacy
 from keras.models import load_model
 import xgboost
 
+st.write(xgboost.__version__)
+
 nlp = spacy.load("en_core_web_sm")
 
 import speech_recognition as sr
