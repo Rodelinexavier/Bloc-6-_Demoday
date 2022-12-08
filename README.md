@@ -16,9 +16,9 @@ l'apprentissage profond avec un réseau de neuronnes.
 Dossier Local_Deploy_With_Microphone: dossier qui contient tous les fichiers pour développer en local une application qui enregistre des communications par un micro 
 dans un intervale de temps défini à l'avance et donne une note d'agressivité en utilisant trois modèles: regression logistique, xgboost et réseau de neuronnes.
 
-Fichier APPinProduction.py: code de l'application qui a été mise en production sur streamlit, l'application permet de uploader un fichier wav puis donne une note
-d'agressivité à chaque phrase détectée. 
-
+Dossier APP_in_production_streamlit: dossier qui contient tous les fichiers pour mettre en production sur streamlit une application qui lit un fichier wav contenant 
+des conversations, le divise en phrase et donne à chaque phrase une note d'agressivité en utilisant trois modèles: regression logistique, xgboost et réseau de 
+neuronnes.
 
 
 
