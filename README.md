@@ -4,9 +4,9 @@ E-mail: mathieu1290@gmail.com
 
 Video:
 
-Lien vers l'application: https://mmatthieu1290-hate-speech-detection-from-appinproduction-dupsz5.streamlit.app/
+Link to app: https://mmatthieu1290-hate-speech-detection-from-appinproduction-dupsz5.streamlit.app/
 
-Dossier sur google drive qui contient les bases de données (les fichiers sont trop imposants pour être déposés sur GitHub: 
+Folder on google drive which contains the databases (the files are too big to be uploaded on GitHub): 
 https://drive.google.com/drive/folders/1hsEim7Hmhzk_r9qbO9smL0goVBNMXC5g
 
 Project Description: This project involves developing an application that can identify the level of verbal aggression in certain conversations. This application could
