@@ -6,6 +6,8 @@ Video:
 
 Link to app: https://mmatthieu1290-hate-speech-detection-from-appinproduction-dupsz5.streamlit.app/
 
+GitHub to app: https://github.com/mmatthieu1290/hate_speech_detection_from_wav
+
 Folder on google drive which contains the databases (the files are too big to be uploaded on GitHub): 
 https://drive.google.com/drive/folders/1hsEim7Hmhzk_r9qbO9smL0goVBNMXC5g
 
