@@ -21,8 +21,7 @@ Local_Deploy_With_Microphone folder: folder that contains all the files to local
 in a predefined time interval and gives an aggressiveness score using three models: logistic regression, xgboost and neural network.
 
 APP_in_production_streamlit folder: folder that contains all the files to put in production on streamlit an application that reads a wav file containing
-conversations, divides it into sentence and gives for each sentence an aggressiveness score using three models: logistic regression, xgboost and network of
-neurons.
+conversations, divides it into sentence and gives for each sentence an aggressiveness score using three models: logistic regression, xgboost and neural network.
 
 
 
