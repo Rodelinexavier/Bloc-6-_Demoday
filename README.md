@@ -2,7 +2,7 @@
 
 E-mail: mathieu1290@gmail.com
 
-Video: https://share.vidyard.com/watch/HhQ4uzrjhWGFE6ap27AnuK?
+Video: https://share.vidyard.com/watch/S1VDHen6FMo14xnjBNjwK5?
 
 Link to app: https://mmatthieu1290-hate-speech-detection-from-appinproduction-dupsz5.streamlit.app/
 
