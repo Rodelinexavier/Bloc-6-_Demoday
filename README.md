@@ -9,19 +9,18 @@ Lien vers l'application: https://mmatthieu1290-hate-speech-detection-from-appinp
 Dossier sur google drive qui contient les bases de données (les fichiers sont trop imposants pour être déposés sur GitHub: 
 https://drive.google.com/drive/folders/1hsEim7Hmhzk_r9qbO9smL0goVBNMXC5g
 
-Description du projet: ce projet consiste à développer une application qui permet d'identifier le niveau d'agressivité verbale de certaines conversations. Cette 
-application pourrait éventuellement servir dans des établissements scolaires pour détecter les lieux où ont lieu des actes de violence à travers des insultes.
-Nous avons entrainé trois modèles (regression logistique, xgboost et réseau de neuronnes) à l'aide de trois bases de données contenant en tout 
+Project Description: This project involves developing an application that can identify the level of verbal aggression in certain conversations. This application could
+possibly be used in schools to detect places where acts of violence take place through insults. We trained three models (logistic regression, xgboost and neural 
+network) using a balanced database containing 138723 texts.
 
-Dossier Notebooks: dossier qui contient les notebooks utilisés pour faire le pre-processing, l'apprentissage supervisé (regression logistique, xgboost),
-l'apprentissage profond avec un réseau de neuronnes.
+Notebooks folder: folder that contains the notebooks used for pre-processing, supervised learning (logistic regression, xgboost), deep learning with a neural network.
 
-Dossier Local_Deploy_With_Microphone: dossier qui contient tous les fichiers pour développer en local une application qui enregistre des communications par un micro 
-dans un intervale de temps défini à l'avance et donne une note d'agressivité en utilisant trois modèles: regression logistique, xgboost et réseau de neuronnes.
+Local_Deploy_With_Microphone folder: folder that contains all the files to locally develop an application that records communications by a microphone
+in a predefined time interval and gives an aggressiveness score using three models: logistic regression, xgboost and neural network.
 
-Dossier APP_in_production_streamlit: dossier qui contient tous les fichiers pour mettre en production sur streamlit une application qui lit un fichier wav contenant 
-des conversations, le divise en phrase et donne à chaque phrase une note d'agressivité en utilisant trois modèles: regression logistique, xgboost et réseau de 
-neuronnes.
+APP_in_production_streamlit folder: folder that contains all the files to put in production on streamlit an application that reads a wav file containing
+conversations, divides it into sentence and gives for each sentence an aggressiveness score using three models: logistic regression, xgboost and network of
+neurons.
 
 
 
