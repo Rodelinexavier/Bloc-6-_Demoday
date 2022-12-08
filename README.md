@@ -9,7 +9,7 @@ Link to app: https://mmatthieu1290-hate-speech-detection-from-appinproduction-du
 GitHub to app: https://github.com/mmatthieu1290/hate_speech_detection_from_wav
 
 Folder on google drive which contains the databases (the files are too big to be uploaded on GitHub): 
-https://drive.google.com/drive/folders/1hsEim7Hmhzk_r9qbO9smL0goVBNMXC5g
+https://drive.google.com/drive/folders/1hsEim7Hmhzk_r9qbO9smL0goVBNMXC5g?usp=sharing
 
 Project Description: This project involves developing an application that can identify the level of verbal aggression in certain conversations. This application could
 possibly be used in schools to detect places where acts of violence take place through insults. We trained three models (logistic regression, xgboost and neural 
