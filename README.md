@@ -1,8 +1,8 @@
 # Bloc_6
 
 E-mail: mathieu1290@gmail.com
-
-Video: https://share.vidyard.com/watch/S1VDHen6FMo14xnjBNjwK5?
+Email : rodelin.exavier@yahoo.fr
+Contribution : Matthieu MARECHAL et Rodelin EXAVIER
 
 Link to app: https://mmatthieu1290-hate-speech-detection-from-appinproduction-dupsz5.streamlit.app/
 
